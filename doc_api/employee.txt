@@ -1,0 +1,44 @@
+
+server = http://localhost:8080/api/
+
+# employee
+- getAll 
+    - url : server + employee
+    - method : GET
+    - params : no
+- getOne
+    - url : server + employee/:id
+    - method : GET
+- cteate
+    - url : server + employee
+    - method : POST
+    - params json
+        {
+            "firstname": "",  // require
+            "lastname": "",
+            "tel": "",
+            "email": "",
+            "base_salary": "",
+            "address": "",
+            "province": "",
+            "country": "",
+        }
+- update
+    - url : server + employee
+    - method : PUT
+    - params json
+        {
+            "employee_id": "",  // require
+            "firstname": "",  // require
+            "lastname": "",
+            "tel": "",
+            "email": "",
+            "base_salary": "",
+            "address": "",
+            "province": "",
+            "country": "",
+        }
+- delete
+    - url : server + employee/:id
+    - method : DELETE
+

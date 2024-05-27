@@ -1,0 +1,35 @@
+
+server = http://localhost:8080/api/
+
+# category
+- getAll 
+    - url : server + category
+    - method : GET
+    - params : no
+- getOne
+    - url : server + category/:id
+    - method : GET
+- cteate
+    - url : server + category
+    - method : POST
+    - params json
+        {
+            "name": "",  // require
+            "description": "",
+            "parent_id" : "",
+            "status" : ""
+        }  
+- update
+    - url : server + category
+    - method : PUT
+    - params json
+        {
+            "category_id" : "", // require
+            "name": "",  // require
+            "description": "",
+            "parent_id" : "",
+            "status" : ""
+        }
+- delete
+    - url : server + category/:id
+    - method : DELETE
